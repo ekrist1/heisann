@@ -17,7 +17,7 @@ class CreateTokensTable extends Migration
             $table->increments('id');
             $table->integer('company_id');
             $table->integer('user_id')->unsigned();
-            $table->string('fingerprint');
+            $table->string('fingerprint')->nullable();
             $table->string('token_2fa')->nullable();
             $table->datetime('token_2fa_expiry')->nullable();
             $table->timestamps();

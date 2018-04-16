@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
+    @include('layouts.partials.analytics')
 </head>
 <body class="font-sans text-black h-full">
 <header class="absolute pin-t pin-l w-full py-4">
