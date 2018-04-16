@@ -21,7 +21,7 @@ class DashboardController extends Controller
 
         $company = Company::CurrentCompany();
 
-        return view('layouts.Dashboard.index', compact('user', 'company'));
+        return view('layouts.dashboard.index', compact('user', 'company'));
     }
 
 }
