@@ -26,7 +26,7 @@ class SendController extends Controller
 
         $groups->prepend(auth()->user()->email);
 
-        return view('layouts.Dashboard.send.create', compact('groups'));
+        return view('layouts.dashboard.send.create', compact('groups'));
     }
 
     public function store(StoreMessage $request) {
