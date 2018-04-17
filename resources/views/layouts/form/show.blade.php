@@ -2,7 +2,6 @@
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS');
-header('X-Frame-Options: *')
 
 @endphp
 
@@ -23,11 +22,11 @@ header('X-Frame-Options: *')
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.0/iframeResizer.contentWindow.min.js"></script>
 
     @include('layouts.partials.analytics')
 </head>
-<body class="flex flex-col min-h-screen bg-transparent h-screen font-family: 'Source Sans Pro', sans-serif">
+
+<body class="flex flex-col min-h-screen bg-transparent font-family: 'Source Sans Pro', sans-serif">
 <div id="app">
 
     <div class="px-6 pb-8 pt-20 md:pt-16 w-full max-w-lg mx-auto mt-4 h-full">
@@ -160,5 +159,11 @@ header('X-Frame-Options: *')
 
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script>
+    var pymChild = new pym.Child();
+    pymChild.sendHeight();
+</script>
+
 </body>
 </html>

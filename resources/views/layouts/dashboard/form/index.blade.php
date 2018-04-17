@@ -20,13 +20,21 @@
         <div class="w-full max-w-lg mx-auto mt-4">
             <div class="flex flex-wrap -mx-3 mb-6">
 
-                <p class="w-full mb-2 font-bold">Lenke til mottaksskjema: </p>
+                <p class="w-full mb-2 font-bold">Direktelenke til mottaksskjema: </p>
                 <a class="w-full" href="{{ $contactFormUrl }}" target="_blank">{{ $contactFormUrl }}</a>
 
-                <p class="mt-3 mb-2 font-bold">Embed-kode til skjema:</p>
+                <p class="mt-3 mb-2 font-bold">Integrere skjema på egen nettsiden (Embed-kode)</p>
                 <input class="w-full block text-grey-darker text-sm font-bold mb-2" value="{{ $contactFormIframe }}">
-                <p class="text-xs">Denne embed-koden kan du legge inn på Wordpress eller andre publiseringsplattformer for
-                    å vise mottaksskjemaet på nettsiden din. </p>
+                <p class="text-xs mb-2">Denne embed-koden kan du legge inn der du ønsker å vise skjemaet på nettsiden din. Se vårt supportsenter hvordan dette kan gjøre på Wordpress og andre publiseringsplattformer. </p>
+                <p class="mt-3 mb-2">I tillegg må du legge inn disse to skriptene på siden du skal vise mottaksskjemaet:</p>
+                <textarea class="w-full block text-grey-darker text-sm font-bold mb-2">
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script type="text/javascript" src="https://pym.nprapps.org/pym-loader.v1.min.js"></script>
+                </textarea>
+
+                <p class="w-full mt-2 font-light text-xs">NB: Benytt gjerne bistand fra din nettsideleverandør for å integrere opplastingsskjema.</p>
+
+
             </div>
         </div>
     @else

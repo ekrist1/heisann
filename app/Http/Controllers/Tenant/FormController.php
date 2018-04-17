@@ -14,7 +14,7 @@ class FormController extends Controller
         $company = Company::CurrentCompany();
         $group = Group::all();
 
-        $contactFormIframe = '<iframe src=' . '"https://heisann.no/form/' . $company->uuid . '" ' . 'frameborder="0" allowfullscreen></iframe>';
+        $contactFormIframe = '<div data-pym-src="https://heisann.no/form/' . $company->uuid . '" ' . 'data-pym-allowfullscreen>Laster skjema</div>';
         $contactFormUrl = 'https://heisann.no/form/' . $company->uuid;
 
         return view('layouts.dashboard.form.index', compact('contactFormIframe', 'contactFormUrl', 'group'));
