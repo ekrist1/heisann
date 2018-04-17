@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
+    @include('layouts.partials.analytics')
 </head>
 <body class="flex flex-col min-h-screen bg-blue-lightest h-screen font-family: 'Source Sans Pro', sans-serif">
     <div id="app">

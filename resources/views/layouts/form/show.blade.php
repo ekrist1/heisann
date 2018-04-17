@@ -1,3 +1,10 @@
+@php
+
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS');
+
+@endphp
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -17,6 +24,7 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.0/iframeResizer.contentWindow.min.js"></script>
 
+    @include('layouts.partials.analytics')
 </head>
 <body class="flex flex-col min-h-screen bg-transparent h-screen font-family: 'Source Sans Pro', sans-serif">
 <div id="app">
