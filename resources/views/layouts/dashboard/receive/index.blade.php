@@ -14,7 +14,7 @@
                 <div class="overflow-hidden bg-white rounded w-full leading-normal mb-2">
                     <p class="text-white bg-blue text-center p-1">Gruppe: {{ $message->group->name }}</p>
                     <div class="block group p-4 border-b">
-                        <p class="font-bold text-lg mb-1 text-black">Til: {{ $message->to }}</p>
+                        <p class="font-bold text-lg mb-1 text-black">Fra: {{ $message->from }}</p>
                         <p class="text-sm mb-1 text-black">Sendt: {{ $message->created_at }} Slettes: {{ $message->time_live->format('d-m-Y') }} </p>
                         <p class="text-grey-darker mb-2">{{ $message->body }}</p>
 
