@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="w-full max-w-lg mx-auto mt-4">
+    <div class="w-full max-w-lg mx-auto mt-4 p-4">
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3 mb-6 md:mb-0">
                 <h2 class="text-center">Sikkerhet på heisann.no</h2>

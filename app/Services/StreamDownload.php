@@ -22,7 +22,6 @@ class StreamDownload {
          * Set headers to allow browser to force a download
          */
         header('Last-Modified: '.$object['LastModified']);
-        // header('Etag: '.$object['ETag']); # We are not implementing validation caching here, but we could!
         header('Accept-Ranges: '.$object['AcceptRanges']);
         header('Content-Length: '.$object['ContentLength']);
         header('Content-Type: '.$object['ContentType']);
@@ -31,9 +30,9 @@ class StreamDownload {
          * Stream file to the browser
          */
         // Open a stream in read-only mode
-        if (!($stream = fopen("s3://{$adapter->getBucket()}/{$file}", 'r'))) {
-            return;
-        }
+
+        $stream = fopen("s3://{$adapter->getBucket()}/{$file}", 'r');
+
         // Check if the stream has more data to read
         while (!feof($stream)) {
             // Read 1024 bytes from the stream

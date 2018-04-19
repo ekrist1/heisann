@@ -5,7 +5,7 @@
 <div>
     <pulseloader :hasfile=true :progress="form.progress" :loading="loading"></pulseloader>
 
-<div class="w-full max-w-lg mx-auto mt-4" v-if="!loading" v-cloak>
+<div class="w-full max-w-lg mx-auto mt-4 p-4" v-if="!loading" v-cloak>
     <div class="flex flex-wrap -mx-3 mb-6">
 
         <div v-if="message" class="flex w-full items-center bg-blue text-white text-sm font-bold px-4 py-3 mb-4" role="alert">

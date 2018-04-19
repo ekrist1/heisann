@@ -17,10 +17,7 @@
 </head>
 <body class="flex flex-col min-h-screen bg-blue-lightest h-screen font-family: 'Source Sans Pro', sans-serif">
     <div id="app">
-        <nav class="bg-white h-12 shadow mb-8">
-            <div class="container mx-auto h-full">
-                <div class="flex items-center justify-center h-12">
-                    <div class="mr-6">
+        <nav class="flex items-center justify-between flex-wrap bg-white mb-8">
                         @auth
                             <a href="{{ url('/dashboard') }}" class="no-underline">
                                 @include('layouts.partials.logo')
@@ -33,8 +30,7 @@
                             </a>
                         @endguest
 
-                    </div>
-                    <div class="flex-1 text-right">
+                    <div class="flex items-center mr-3">
                         @guest
                             <a class="no-underline hover:underline text-grey-darker pr-3 text-sm" href="{{ url('/login') }}">Logg inn</a>
                             <a class="no-underline hover:underline text-grey-darker text-sm" href="{{ url('/register') }}">Ny bruker</a>
@@ -50,8 +46,6 @@
                             </form>
                         @endguest
                     </div>
-                </div>
-            </div>
         </nav>
 
         @yield('content')

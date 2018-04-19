@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 Use App\Message;
 use App\File;
 use Illuminate\Support\Facades\Storage;
+use App\Services\StreamDownload;
+use Illuminate\Support\Facades\Log;
 
 
 
@@ -17,7 +19,13 @@ class ReceiveController extends Controller
         if ($request->has('file_id')) {
             $file = File::where('uuid',$request->query('file_id'))->firstOrfail();
             $filePath = $file->uuid;
-            return Storage::disk('s3')->download($filePath, $file->original_name);
+            try {
+                StreamDownload::Download($filePath, $file->original_name);
+            } catch (\Exception $e) {
+                Log::error($e->getMessage());
+                return back()->with('status', 'Noe gikk galt ved nedlasting');
+            }
+
         }
 
         $messages = Message::where('is_received', true)->with('group')->latest()->simplePaginate(10);

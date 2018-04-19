@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="w-full max-w-lg mx-auto mt-4">
+    <div class="w-full max-w-lg mx-auto mt-4 p-4">
         <p class="text-center text-xl font-bold mb-4">Priser og betingelser for bruk av Heisann.no</p>
         <div class="px-2">
             <div class="flex flex-wrap -mx-2">

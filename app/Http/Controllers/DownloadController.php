@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 use App\Services\SetConfigSecretKey;
 use App\Services\StreamDownload;
+use Illuminate\Support\Facades\Log;
+
 
 
 class DownloadController extends Controller
@@ -78,8 +80,13 @@ class DownloadController extends Controller
 
         $filePath = $file->uuid;
 
-        StreamDownload::Download($filePath, $file->original_name);
-        return;
+        try {
+            StreamDownload::Download($filePath, $file->original_name);
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+            return back()->with('status', 'Noe gikk galt ved nedlasting');
+        }
+
         //return Storage::disk('s3')->download($filePath, $file->original_name);
 
 
