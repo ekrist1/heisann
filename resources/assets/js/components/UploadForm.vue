@@ -26,6 +26,9 @@
 
             }
         },
+        created() {
+         this.refresh();
+        },
         methods: {
             attachDocuments: function(e) {
                 this.fileNames = [];
@@ -67,6 +70,11 @@
                     this.displayZipError = '';
                 }, 4000);
             },
+            refresh() {
+                setTimeout(() => {
+                    window.location.reload(true);
+                }, 60*60000);
+            }
         }
     }
 </script>
