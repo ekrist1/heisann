@@ -8,7 +8,7 @@
             <p slot="button_name">Kjøp</p>
         </add-credit>
 
-        <a href="#" class="w-full font-bold text-center text-grey-dark mt-6">Kvitteringer</a>
+        <a href="{{ route('invoice') }}" class="w-full font-bold text-center text-grey-dark mt-6">Kvitteringer</a>
     </div>
 </div>
 @endsection

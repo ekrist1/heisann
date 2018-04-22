@@ -35,5 +35,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard/payment', 'CheckoutController@index');
     Route::post('/dashboard/checkout', 'CheckoutController@store');
 
+    // invoice routes
+    Route::get('/dashboard/invoice', 'InvoiceController@index')->name('invoice');
+    Route::get('/dashboard/invoice/{id}', 'InvoiceController@show');
+
 
 });

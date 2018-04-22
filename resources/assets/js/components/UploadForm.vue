@@ -1,9 +1,10 @@
 <script>
     import Form from 'form-backend-validation';
     import Pulseloader from './utilities/Pulseloader.vue';
+    import Tabs from './utilities/Tabs.vue';
 
     export default {
-        components: { Pulseloader },
+        components: { Pulseloader, Tabs },
         props: ['action', 'method', 'company_id'],
         data() {
             return {
@@ -23,13 +24,24 @@
                     uuid: this.company_id,
                     attachments: [],
                 }),
+                tabnames: [
+                    {id: 0, name: 'Ny melding',},
+                    {id: 1, name: 'Sikkerhet'},
+                ],
+                selectedContentTab: 'Ny melding'
 
             }
         },
         created() {
          this.refresh();
         },
+        mounted() {
+            this.$eventHub.$on('showTabContentIndex', this.showTabContentIndex)
+        },
         methods: {
+            showTabContentIndex (tab) {
+                this.selectedContentTab = tab.name
+            },
             attachDocuments: function(e) {
                 this.fileNames = [];
                 this.form.attachments =  e.target.files || e.dataTransfer.files;
@@ -52,8 +64,12 @@
                         location.reload();
                         //window.location.href = response.redirect;
                     })
-                    .catch(response => {
+                    .catch(error => {
                         this.loading = false;
+                        if (error.response.status === 419) {
+                            alert('Du har vært for lenge inaktiv. Du må sende skjemaet på nytt');
+                            window.location.reload(true);
+                        }
                         this.displayErrorMessage('Noe gikk galt :( prøv på nytt igjen');
                     });
                 window.scrollTo(0, 0);
@@ -73,7 +89,7 @@
             refresh() {
                 setTimeout(() => {
                     window.location.reload(true);
-                }, 60*60000);
+                }, 3600000);
             }
         }
     }
