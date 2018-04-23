@@ -22,9 +22,11 @@ class TailwindExtractor {
 
 mix
   .js("resources/assets/js/app.js", "public/js")
-  .postCss("resources/assets/css/main.css", "public/css", [
+    .postCss("resources/assets/css/main.css", "public/css", [
     tailwindcss("tailwind.js")
   ]);
+
+mix.version(['public/js/app.js', 'public/css/main.css']);
 
 // If you want to use LESS for your preprocessing
 // mix.less('resources/assets/less/main.less', 'public/css')

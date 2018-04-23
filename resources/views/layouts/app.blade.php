@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Heisann.no') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{  mix('css/main.css') }}" rel="stylesheet">
 
     @include('layouts.partials.analytics')
 </head>
@@ -60,6 +60,6 @@
 
     <!-- Scripts -->
     @yield('stripe')
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     <title>{{ config('app.name', 'Heisann.no') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/main.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
 
@@ -174,7 +174,7 @@
     </div>
 </div>
 
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
 <script>
     var pymChild = new pym.Child();

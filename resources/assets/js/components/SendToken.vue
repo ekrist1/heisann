@@ -14,6 +14,7 @@
 
 <script>
     import Pulseloader from './utilities/Pulseloader.vue'
+
     export default {
         components: { Pulseloader },
         data() {
