@@ -17,7 +17,7 @@
 </head>
 <body class="font-sans text-black h-full">
 <header class="absolute pin-t pin-l w-full py-4">
-    <div class="flex items-center justify-between px-8">
+    <div class="flex items-center justify-between px-2">
                 <span class="text-2xl tracking-tight font-semibold">
                     @include('layouts.partials.logo')
                 </span>
