@@ -110,7 +110,7 @@
                     <svg class="align-middle text-teal" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
                 </div>
                 <h3 class="text-3xl font-semibold tracking-tight leading-none mb-3">Unngå at informasjon kommer på avveie</h3>
-                <p class="text-lg leading-normal text-grey-dark mb-8">Visst du at e-post er en usikker kommunikasjonskanal? Med Heisann kan du sende trygt, helt enkelt.</p>
+                <p class="text-lg leading-normal text-grey-dark mb-8">Viste du at e-post er en usikker kommunikasjonskanal? Med Heisann kan du sende trygt, helt enkelt.</p>
             </div>
             <div class="w-full sm:w-1/2 lg:w-1/4 px-6 py-6">
                 <div class="mb-8">
@@ -269,8 +269,8 @@
             <div class="w-full lg:w-1/3 px-6 py-6">
                 <a class="no-underline" href="#">
                     <div class="bg-purple-light rounded shadow-lg overflow-hidden p-8">
-                        <h5 class="text-2xl text-white mb-4">Rimelig</h5>
-                        <p class="text-lg text-white leading-tight">Send og motta meldinder sikkert, til samme kostnad som ett frimerke.</p>
+                        <h5 class="text-2xl text-white mb-4">Store filer</h5>
+                        <p class="text-lg text-white leading-tight">Send og motta filer på inntill 100 mb</p>
                     </div>
                 </a>
             </div>
