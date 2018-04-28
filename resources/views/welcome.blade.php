@@ -19,7 +19,7 @@
 <header class="absolute pin-t pin-l w-full py-4">
     <div class="flex items-center justify-between px-2">
                 <span class="text-2xl tracking-tight font-semibold">
-                    @include('layouts.partials.logo')
+
                 </span>
         <div class="">
             <div class="flex items-center">
@@ -41,8 +41,9 @@
     <div class="w-5/6 max-w-lg ml-auto mr-auto h-full">
         <div class="flex items-center justify-center text-center h-full">
             <div>
-                <h1 class="text-4xl sm:text-5xl font-semibold leading-none tracking-tight mb-4">Send dokumenter og beskjeder sikkert</h1>
-                <h2 class="text-2xl sm:text-3xl text-blue-darker opacity-75 font-normal leading-tight mb-8">Send sensitive dokumenter og beskjeder enkelt og sikkert</h2>
+                <h1 class="text-3xl sm:text-5xl font-light leading-none tracking-tight mb-4"><span class="font-bold">Hei</span>sann</h1>
+                @include('layouts.partials.heisann_icon')
+                <h2 class="text-2xl sm:text-3xl text-blue-darker opacity-75 font-normal leading-tight mb-8 mt-2">Send sensitive dokumenter og beskjeder enkelt og sikkert</h2>
                 <div class="flex flex-col sm:flex-row items-center justify-center sm:pt-3 mb-3 sm:mb-6">
                     <a class="flex items-center text-xl leading-none text-blue hover:text-blue-dark no-underline mb-2 sm:mb-0 sm:mr-4" href="#priser">
                         <div class="mr-3">
@@ -312,7 +313,7 @@
                 <ul class="list-reset leading-normal">
                     <li><a href="/security" class="hover:text-orange text-grey-darker">Sikkerhet</a></li>
                     <li><a href="/support" class="hover:text-orange text-grey-darker">Support</a></li>
-                    <li><a href="/support" class="hover:text-orange text-grey-darker">Hjelpesenter</a></li>
+                    <li><a href="/help" target="_blank" class="hover:text-orange text-grey-darker">Hjelpesenter</a></li>
                     <li><a href="/video" class="hover:text-orange text-grey-darker">Opplæringsfilmer</a></li>
                     <li><a href="/gdpr" class="hover:text-orange text-grey-darker">GDPR</a></li>
                 </ul>

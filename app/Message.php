@@ -6,7 +6,7 @@ use App\Tenant\Traits\ForTenants;
 use Illuminate\Database\Eloquent\Model;
 use App\Facades\SodiumEncrypter;
 use Carbon\Carbon;
-
+use App\Filters\Received\ReceivedFilters;
 
 
 class Message extends Model
@@ -36,6 +36,11 @@ class Message extends Model
 
     public function scopeFindExpired($query) {
         return $query->withoutGlobalScopes()->where('created_at', '<=', Carbon::now()->subDays(14)->toDateTimeString());
+    }
+
+    public function scopeFilter (Builder $builder, $request, array $filters = []) {
+
+        return (new ReceivedFilters($request))->add($filters)->filter($builder);
     }
 
     public function files() {

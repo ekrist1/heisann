@@ -10,6 +10,19 @@
             </div>
 
             <h3 class="text-left mb-2">Mottatte meldinger</h3>
+
+            <form action="" method="GET">
+                <div class="flex w-full">
+                    <div class="flex-grow text-grey-darker text-center px-1 py-2 ml-2 mb-2 mt-2">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker h-12" type="text" name="name" placeholder="Søk etter e-postadresse" >
+                    </div>
+                    <div class="flex-no-grow text-grey-darkest text-center py-2 mb-2 mt-2 mr-2">
+                        <button type="submit" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded h-12">Søk</button>
+                    </div>
+                </div>
+            </form>
+
+
             @foreach($messages as $message)
                 <div class="overflow-hidden bg-white rounded w-full leading-normal mb-2">
                     <p class="text-white bg-blue text-center p-1">Gruppe: {{ $message->group->name }}</p>

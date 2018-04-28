@@ -20,13 +20,13 @@
         <nav class="flex items-center justify-between flex-wrap bg-white mb-8">
                         @auth
                             <a href="{{ url('/dashboard') }}" class="no-underline">
-                                @include('layouts.partials.logo')
+                                <h1 class="text-3xl sm:text-4xl font-light leading-none tracking-tight ml-3 mt-1 text-black"><span class="font-bold">Hei</span>sann</h1>
                             </a>
                         @endauth
 
                         @guest
                             <a href="{{ url('/') }}" class="no-underline">
-                                @include('layouts.partials.logo')
+                                <h1 class="text-3xl sm:text-4xl font-light leading-none tracking-tight ml-3 mt-1 text-black"><span class="font-bold">Hei</span>sann</h1>
                             </a>
                         @endguest
 

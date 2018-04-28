@@ -38,7 +38,9 @@ Route::view('/security', 'about.security');
 Route::view('/support', 'about.support');
 Route::view('/prices', 'about.prices');
 Route::view('/why', 'about.why');
-Route::view('/help', 'about.help');
+Route::get('/help', function () {
+    return redirect()->away('https://heisann.netlify.com');
+});
 Route::view('/gdpr', 'about.gdpr');
 Route::view('/video', 'about.video_guides');
 Route::view('/terms', 'about.terms');
