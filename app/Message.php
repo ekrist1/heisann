@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Facades\SodiumEncrypter;
 use Carbon\Carbon;
 use App\Filters\Received\ReceivedFilters;
+use Illuminate\Database\Eloquent\Builder;
 
 
 class Message extends Model
@@ -38,7 +39,7 @@ class Message extends Model
         return $query->withoutGlobalScopes()->where('created_at', '<=', Carbon::now()->subDays(14)->toDateTimeString());
     }
 
-    public function scopeFilter (Builder $builder, $request, array $filters = []) {
+    public function scopeFilter(Builder $builder, $request, array $filters = []) {
 
         return (new ReceivedFilters($request))->add($filters)->filter($builder);
     }

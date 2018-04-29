@@ -26,6 +26,7 @@ Vue.component('flash', require('./components/utilities/flash.vue'));
 Vue.component('confirm-delete', require('./components/utilities/deleteConfirmation.vue'));
 Vue.component('generate-pdf', require('./components/utilities/GeneratePdf.vue'));
 Vue.component('animate-text', require('./components/utilities/animateText.vue'));
+Vue.component('show-hide-filter', require('./components/utilities/ShowHideFilter.vue'));
 
 const app = new Vue({
     el: '#app'

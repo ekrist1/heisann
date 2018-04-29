@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filters\Product;
+namespace App\Filters\Received;
 
 use App\Filters\FiltersAbstract;
 use App\Filters\Received\{GroupFilter, NameFilter};

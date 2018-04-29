@@ -9,7 +9,9 @@ class GroupFilter extends FilterAbstract
 {
     public function filter(Builder $builder, $value)
     {
-        return $builder->where('name', 'LIKE', '%' . $value . '%');
+        return $builder->whereHas('group', function ($builder) use ($value) {
+            $builder->where('name', 'LIKE', $value);
+        });
 
     }
 }

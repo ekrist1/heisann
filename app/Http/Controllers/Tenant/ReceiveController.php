@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Tenant;
 
+use App\Group;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 Use App\Message;
@@ -9,7 +10,6 @@ use App\File;
 use Illuminate\Support\Facades\Storage;
 use App\Services\StreamDownload;
 use Illuminate\Support\Facades\Log;
-
 
 
 class ReceiveController extends Controller
@@ -28,10 +28,11 @@ class ReceiveController extends Controller
 
         }
 
-        $messages = Message::where('is_received', true)->with('group')->latest()->simplePaginate(10);
+        $messages = Message::where('is_received', true)->with('group')->filter($request)->latest()->simplePaginate(10);
+        $groups = Group::all();
 
 
-    return view('layouts.dashboard.receive.index', compact('messages'));
+    return view('layouts.dashboard.receive.index', compact('messages', 'groups'));
 
     }
 
