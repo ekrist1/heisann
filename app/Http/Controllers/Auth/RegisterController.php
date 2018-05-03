@@ -78,7 +78,7 @@ class RegisterController extends Controller
             'active' => false,
             'activation_token' => str_random(255),
         ]);
-        $user->assignRole('admin');
+        $user->giveRoleTo('admin');
         $domain_name = substr(strrchr($data['email'], "@"), 1);
         $company = $user->companies()->create([
             'name' => $data['company_name'],

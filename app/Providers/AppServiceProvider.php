@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\UrlGenerator;
 use Carbon\Carbon;
 
-
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -19,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       //
+
         Carbon::setLocale('no');
 
     }
@@ -42,5 +41,6 @@ class AppServiceProvider extends ServiceProvider
         Request::macro('tenant', function () {
             return app(Manager::class)->getTenant();
         });
+
     }
 }

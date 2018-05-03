@@ -16,4 +16,8 @@ class Group extends Model
         return $query->withoutGlobalScopes()->where('company_id', $company_id);
     }
 
+    public function users() {
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
+
 }

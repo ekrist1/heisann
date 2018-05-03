@@ -40,7 +40,7 @@ class UserManagerController extends Controller
             'password' => Hash::make($request->password),
             'active' => true,
         ]);
-        $user->assignRole('user');
+        $user->giveRoleTo('user');
 
         $company = $user->companies()->attach(app(Manager::class)->getTenant()->id);
 

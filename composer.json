@@ -15,7 +15,6 @@
         "nexmo/laravel": "^1.1",
         "predis/predis": "^1.1",
         "propaganistas/laravel-phone": "^4.0",
-        "spatie/laravel-permission": "^2.9",
         "stripe/stripe-php": "^6.4"
     },
     "require-dev": {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\tenant;
 
+use App\Http\Requests\StoreGroup;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Group;
@@ -25,23 +27,24 @@ class GroupController extends Controller
 
     public function create()
     {
-        return view('layouts.dashboard.groups.create');
+        $users = User::where('active', 1)->get(['name', 'id']);
+
+        return view('layouts.dashboard.groups.create', compact('users'));
     }
 
-    public function store(Request $request)
+    public function store(StoreGroup $request)
     {
-        $request->validate([
-            'name' => 'required|max:100',
-            'email' => 'email',
-        ]);
 
-        Group::create([
+        $group = Group::create([
             'name' => $request->name,
             'email' => $request->email,
             'description' => $request->description
         ]);
 
-        return redirect(route('settings'))->with('status', 'Gruppe ble opprettet');
+        $group->users()->sync($request->tagToArray());
+
+        session()->flash('status', 'Gruppe ble opprettet');
+        return ['redirect' => route('settings')];
 
     }
 
@@ -55,32 +58,43 @@ class GroupController extends Controller
     public function edit($id)
     {
         $group = Group::find($id);
-        return view('layouts.dashboard.groups.edit', compact('group'));
+        $users = User::where('active', 1)->get(['name', 'id']);
+
+        //dd($group->users()->get(['id', 'name']));
+        $group = array_add($group,'user_group', $group->users()->get(['id', 'name']));
+        //dd($group);
+
+        return view('layouts.dashboard.groups.edit', compact('group', 'users'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(StoreGroup $request, $id)
     {
-        $request->validate([
-            'name' => 'required|max:100',
-            'email' => 'email',
-        ]);
 
-        $group = Group::find($id);
+        $group = Group::findOrFail($id);
 
         $group->update([
             'name' => $request->name,
             'email' => $request->email,
             'description' => $request->description
         ]);
-        return redirect(route('settings'))->with('status', 'Firmaopplysniger ble oppdatert');
+
+        $group->users()->sync($request->tagToArray());
+
+        session()->flash('status', 'Gruppe ble oppdatert');
+        return ['redirect' => route('settings')];
     }
 
 
     public function destroy($id)
     {
+        $group = Group::findOrFail($id);
+        $group->users()->detach();
         Group::destroy($id);
+
         session()->flash('status', 'Gruppe ble slettet');
         return ['redirect' => action('Tenant\GroupController@index')];
     }
+
+
 }

@@ -28,8 +28,15 @@ class ReceiveController extends Controller
 
         }
 
-        $messages = Message::where('is_received', true)->with('group')->filter($request)->latest()->simplePaginate(10);
-        $groups = Group::all();
+        if(auth()->user()->hasRole('admin')) {
+            $groups = Group::all();
+        } else {
+            $groups = Auth()->user()->groups()->get();
+        };
+
+        $messages = Message::where('is_received', true)->whereHas('group', function ($query) use($groups) {
+            $query->whereIn('id', $groups->pluck('id'));
+        })->filter($request)->latest()->simplePaginate(10);
 
 
     return view('layouts.dashboard.receive.index', compact('messages', 'groups'));

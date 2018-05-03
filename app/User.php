@@ -2,21 +2,21 @@
 
 namespace App;
 
+use App\Permissions\HasPermissionsTrait;
+
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Notifications\Messages\MailMessage;
 
-use Spatie\Permission\Traits\HasRoles;
-
 use App\Tenant\Manager;
 
 
 class User extends Authenticatable
 {
-    use Notifiable;
-    use HasRoles;
+    use Notifiable, HasPermissionsTrait;
+
 
     /**
      * The attributes that are mass assignable.

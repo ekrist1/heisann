@@ -163,6 +163,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\EloquentEventServiceProvider::class,
         App\Providers\SodiumEncryptionServiceProvider::class,
+        App\Providers\PermissionsServiceProvider::class,
 
     ],
 
