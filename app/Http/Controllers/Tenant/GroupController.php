@@ -32,7 +32,7 @@ class GroupController extends Controller
 
     public function create()
     {
-        $users = User::where('active', 1)->get(['name', 'id']);
+        $users = User::CompanyUsers()->get(['name', 'id']);
 
         return view('layouts.dashboard.groups.create', compact('users'));
     }
@@ -63,7 +63,7 @@ class GroupController extends Controller
     public function edit($id)
     {
         $group = Group::find($id);
-        $users = User::where('active', 1)->get(['name', 'id']);
+        $users = User::CompanyUsers()->get(['name', 'id']);
 
         //dd($group->users()->get(['id', 'name']));
         $group = array_add($group,'user_group', $group->users()->get(['id', 'name']));
