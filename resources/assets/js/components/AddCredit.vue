@@ -2,7 +2,8 @@
     <div>
         <h3 class="w-full text-center mb-6">Saldo på konto: {{ credit }}</h3>
 
-        <h4 class="w-full text-center mb-6">Velg beløp du ønsker å fylle opp kontoen med (alle beløp eks.mva)</h4>
+        <h4 class="w-full text-center">Velg beløp du ønsker å fylle opp kontoen med</h4>
+        <p class="text-xs text-center w-full mb-6">(alle beløp eksklusive transaksjonsgebyr - 25%)</p>
 
         <div class="mb-4">
             <input type="radio" id="one" :value=100 v-model="amount">

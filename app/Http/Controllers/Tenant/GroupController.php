@@ -10,6 +10,11 @@ use App\Group;
 
 class GroupController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('role:admin', ['except' => ['index']]);
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -9,9 +9,9 @@ Dette er en bekreftelse på din betaling. Du kan laste ned fakturakopi under sal
 Spesifikasjon:<br>
 Tjeneste: Kjøp av saldo til meldinger<br>
 Beløp: {{ $invoice['amount'] / 100 }},- <br>
-Moms: {{ $invoice['VAT'] / 100 }},- <br>
+Transaksjonsgebyr(25%): {{ $invoice['VAT'] / 100 }},- <br>
 <br><br>
-Totalt inkl.mva: {{ $invoice['sum'] / 100 }},- <br>
+Totalt: {{ $invoice['sum'] / 100 }},- <br>
 
 Takk for betalingen,<br>
 Heisann.no

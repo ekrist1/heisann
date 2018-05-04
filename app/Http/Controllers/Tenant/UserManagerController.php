@@ -12,6 +12,11 @@ use Propaganistas\LaravelPhone\PhoneNumber;
 
 class UserManagerController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('role:admin', ['except' => ['index']]);
+    }
+
     public function index() {
 
         $users = User::CompanyUsers()->get();
