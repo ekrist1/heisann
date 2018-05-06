@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="w-full max-w-lg mx-auto mt-4">
-        <div class="flex flex-wrap -mx-3 mb-3">
-            <nav class="p-3 rounded font-sans w-full m-4">
+    <div class="w-full max-w-lg mx-auto">
+        <div class="flex flex-wrap -mx-3 mb-1">
+            <nav class="p-3 rounded font-sans w-full">
                 <ol class="list-reset flex text-grey-dark">
                     <li><a href="/dashboard" class="text-blue font-bold">Hjem</a></li>
                     <li><span class="mx-2">/</span></li>

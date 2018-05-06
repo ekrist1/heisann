@@ -10,6 +10,11 @@ use App\Http\Requests\CompanyUpdate;
 
 class CompanyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('role:admin');
+    }
+
     public function edit() {
 
         $company = Auth()->user()->companies->where('id', request()->tenant()->id)->first();

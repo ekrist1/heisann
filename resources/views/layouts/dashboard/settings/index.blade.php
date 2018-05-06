@@ -4,9 +4,23 @@
     <div class="px-6 pb-8 pt-20 md:pt-16 w-full max-w-lg mx-auto mt-4">
         <div class="flex flex-wrap -mx-2 justify-center">
 
+            <div class="w-full max-w-lg mx-auto">
+                <div class="flex flex-wrap -mx-3 mb-1">
+                    <nav class="p-3 rounded font-sans w-full">
+                        <ol class="list-reset flex text-grey-dark">
+                            <li><a href="/dashboard" class="text-blue font-bold">Hjem</a></li>
+                            <li><span class="mx-2">/</span></li>
+                            <li>Innstillinger</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
             <div class="w-full">
                 <flash status="{{ session('status') }}"></flash>
             </div>
+
+            @role('admin')
 
             <div class="w-40 md:w-48 pr-2 pb-2">
                 <a href="{{ route('edit-company') }}">
@@ -43,6 +57,8 @@
                     </div>
                 </a>
             </div>
+
+            @endrole
 
             <div class="w-40 md:w-48 pr-2 pb-2">
                 <a href="{{ url('/dashboard/form') }}">
