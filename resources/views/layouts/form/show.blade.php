@@ -12,7 +12,7 @@
     <title>{{ config('app.name', 'Heisann.no') }}</title>
 
     <!-- Styles -->
-    <link href="{{ mix('css/main.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
 
