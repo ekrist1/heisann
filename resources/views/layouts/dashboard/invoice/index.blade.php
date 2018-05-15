@@ -27,7 +27,7 @@
 
                     <p class="w-full">Dato: {{ $invoice->order_date->format('d/m/Y') }}</p>
                     <p class="w-full">Beløp: {{ $invoice->sum / 100 }},-</p>
-                    <p class="w-full mb-3 mt-2"><a href="#">Se fakturakopi</a></p>
+                    <p class="w-full mb-3 mt-2"><a href="{{ action('Tenant\InvoiceController@show', ['id' => $invoice->id]) }}">Se fakturakopi</a></p>
                 </div>
             @endforeach
         </div>
