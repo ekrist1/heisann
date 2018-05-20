@@ -11,10 +11,10 @@
     },
     "devDependencies": {
         "axios": "^0.18",
-        "cross-env": "^5.1.4",
+        "cross-env": "^5.1.5",
         "glob-all": "*",
         "laravel-mix": "^2.1.11",
-        "laravel-mix-purgecss": "^2.0",
+        "laravel-mix-purgecss": "^2.1.2",
         "laravel-mix-tailwind": "^0.1.0",
         "lodash": "^4.17.10",
         "popper.js": "^1.14.3",
@@ -23,10 +23,9 @@
         "vue": "^2.5.16"
     },
     "dependencies": {
-        "ajv": "^6.4.0",
+        "ajv": "^6.5.0",
         "form-backend-validation": "^2.3.3",
         "moment": "^2.22.1",
-        "npm": "^5.8.0",
         "vue-multiselect": "^2.1.0",
         "vue-template-compiler": "^2.5.16"
     }

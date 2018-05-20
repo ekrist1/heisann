@@ -39,7 +39,7 @@ Route::view('/support', 'about.support');
 Route::view('/prices', 'about.prices');
 Route::view('/why', 'about.why');
 Route::get('/help', function () {
-    return redirect()->away('https://heisann.netlify.com');
+    return redirect()->away('https://help.heisann.no');
 });
 Route::view('/gdpr', 'about.gdpr');
 Route::view('/video', 'about.video_guides');
