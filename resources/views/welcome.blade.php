@@ -5,11 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Send konfidensiell og sensitiv informasjon sikkert og kryptert. Bedrifter bruker Heisann for sikker sending og mottak av dokumenter og beskjeder.">
+    <meta name="image" content="https://heisann.no/images/about.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Heisann.no - Brukervennlig løsning for sikker kommunikasjon">
+    <meta itemprop="description" content="Send konfidensiell og sensitiv informasjon sikkert og kryptert. Bedrifter bruker Heisann for sikker sending og mottak av dokumenter og beskjeder">
+    <meta itemprop="image" content="https://heisann.no/images/about.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Heisann.no - Brukervennlig løsning for sikker kommunikasjon">
+    <meta name="twitter:description" content="Send konfidensiell og sensitiv informasjon sikkert og kryptert. Bedrifter bruker Heisann for sikker sending og mottak av dokumenter og beskjeder">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Heisann.no - Brukervennlig løsning for sikker kommunikasjon">
+    <meta name="og:description" content="Send konfidensiell og sensitiv informasjon sikkert og kryptert. Bedrifter bruker Heisann for sikker sending og mottak av dokumenter og beskjeder">
+    <meta name="og:type" content="website">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} -  Brukervennlig løsning for sikker kommunikasjon</title>
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
