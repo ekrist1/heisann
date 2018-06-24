@@ -37,7 +37,7 @@ class SendPasswordToReceiver
 
         $nexmo->message()->send([
             'to'   => $event->encrypted_message->mobile,
-            'from' => 'Heisann',
+            'from' => 'heisann.no',
             'text' => $sms_text
         ]);
 
