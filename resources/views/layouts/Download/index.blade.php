@@ -9,7 +9,7 @@
 
 
                 <h1 class="text-center text-2xl text-green-dark">Hent dokumenter</h1>
-                <p class="text-xs mt-2">Heisann.no er en tjeneste for <span class="font-bold">sikker</span> og <span class="font-bold">kryptert</span> sending og mottak av dokumenter. En av dine forbindelser har brukt heisann.no for å sende deg en beskjed</p>
+                <p class="text-xs mt-2"><a href="https://heisann.no" target="_blank">Heisann.no </a> er en tjeneste for <span class="font-bold">sikker</span> og <span class="font-bold">kryptert</span> sending og mottak av dokumenter. En av dine forbindelser har brukt heisann.no for å sende deg en beskjed</p>
 
                 <div class="w-full">
                     @include('layouts.dashboard.partials.status')
