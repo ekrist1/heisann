@@ -11,6 +11,7 @@
                 @include('layouts.dashboard.partials.status')
 
                 <div class="bg-white p-3 rounded rounded-b">
+
                     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">
                         {{ csrf_field() }}
 

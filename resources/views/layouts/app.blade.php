@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{  mix('css/app.css') }}" rel="stylesheet">
-    
+
 </head>
 <body class="flex flex-col min-h-screen bg-blue-lightest h-screen font-family: 'Source Sans Pro', sans-serif">
     <div id="app">

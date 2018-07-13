@@ -8,6 +8,11 @@
                     Få ny kontoaktiveringslenke på e-post
                 </div>
                 <div class="bg-white p-3 rounded rounded-b">
+
+                    <div class="text-center">
+                        @include('layouts.partials.img_forgot_password')
+                    </div>
+
                     <form class="form-horizontal" method="POST" action="{{ route('auth.resend') }}">
                         {{ csrf_field() }}
 

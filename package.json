@@ -19,11 +19,11 @@
         "lodash": "^4.17.10",
         "popper.js": "^1.14.3",
         "purgecss-webpack-plugin": "^0.21.0",
-        "tailwindcss": "^0.6.0",
+        "tailwindcss": "^0.6.3",
         "vue": "^2.5.16"
     },
     "dependencies": {
-        "ajv": "^6.5.1",
+        "ajv": "^6.5.2",
         "form-backend-validation": "^2.3.3",
         "moment": "^2.22.2",
         "vue-multiselect": "^2.1.0",

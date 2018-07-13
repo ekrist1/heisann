@@ -3,6 +3,11 @@
 @section('content')
 <div class="flex items-center">
     <div class="md:w-1/2 md:mx-auto">
+
+        <div class="text-center">
+            @include('layouts.partials.img_login')
+        </div>
+
         <div class="rounded shadow">
             <div class="font-medium text-lg text-white bg-blue-dark p-3 rounded-t">
                 Logg inn
@@ -11,6 +16,7 @@
             @include('layouts.dashboard.partials.status')
 
             <div class="bg-white p-3 rounded-b">
+
                 <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
 

@@ -18,8 +18,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-route::get('/auth/activate', 'Auth\ActivationController@activation')->name('auth.activate');
-route::get('/auth/activate/resend', 'Auth\ActivationController@showResendForm')->name('auth.resend');
+Route::get('/auth/activate', 'Auth\ActivationController@activation')->name('auth.activate');
+Route::get('/auth/activate/resend', 'Auth\ActivationController@showResendForm')->name('auth.resend');
 Route::post('/auth/activate/resend', 'Auth\ActivationController@resend');
 
 //Retrieve and download messages
