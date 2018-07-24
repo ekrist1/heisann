@@ -19,7 +19,7 @@
         "lodash": "^4.17.10",
         "popper.js": "^1.14.3",
         "purgecss-webpack-plugin": "^0.21.0",
-        "tailwindcss": "^0.6.3",
+        "tailwindcss": "^0.6.4",
         "vue": "^2.5.16"
     },
     "dependencies": {
