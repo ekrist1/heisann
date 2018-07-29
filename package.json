@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "ajv": "^6.5.2",
-        "form-backend-validation": "^2.3.3",
+        "form-backend-validation": "github:ekrist1/form-backend-validation",
         "moment": "^2.22.2",
         "vue-multiselect": "^2.1.0",
         "vue-template-compiler": "^2.5.16"

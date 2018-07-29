@@ -76,7 +76,7 @@ class DownloadController extends Controller
 
         $message_token = $this->decryptMessage($request);
 
-        $file = File::DownloadFile($fileid);
+        $file = File::DownloadFile($request->file_id);
 
         $filePath = $file->uuid;
 
