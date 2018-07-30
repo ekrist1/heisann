@@ -72,7 +72,10 @@ class DownloadController extends Controller
 
     public function filedownload(Request $request, $fileid) {
 
-        $this->validateSignature($request);
+        if (! $request->hasValidSignature()) {
+            abort(401);
+        }
+        //$this->validateSignature($request);
 
         $message_token = $this->decryptMessage($request);
 

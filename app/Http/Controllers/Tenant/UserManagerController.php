@@ -78,7 +78,7 @@ class UserManagerController extends Controller
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->phone = $request->mobile;
+        $user->phone = PhoneNumber::make($request->mobile)->ofCountry($request->country);
         $user->active = true;
        if(!empty($request->input('password')))
        {

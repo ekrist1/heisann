@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Redis;
+use Propaganistas\LaravelPhone\PhoneNumber;
 
 class RegisterController extends Controller
 {
@@ -73,7 +74,7 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'phone' => $data['phone'],
+            'phone' => PhoneNumber::make($data['phone'])->ofCountry($data['country']),
             'password' => Hash::make($data['password']),
             'active' => false,
             'activation_token' => str_random(255),
