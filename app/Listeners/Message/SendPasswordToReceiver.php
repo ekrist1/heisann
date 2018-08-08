@@ -34,8 +34,6 @@ class SendPasswordToReceiver
 
         $sms_text = $this->createOTP($event);
 
-        //$nexmo = app('Nexmo\Client');
-
         Nexmo::message()->send([
             'to'   => $event->encrypted_message->mobile,
             'from' => 'heisann',

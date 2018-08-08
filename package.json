@@ -14,19 +14,19 @@
         "cross-env": "^5.2.0",
         "glob-all": "*",
         "laravel-mix": "^2.1.11",
-        "laravel-mix-purgecss": "^2.2.0",
+        "laravel-mix-purgecss": "^2.2.3",
         "laravel-mix-tailwind": "^0.1.0",
         "lodash": "^4.17.10",
-        "popper.js": "^1.14.3",
+        "popper.js": "^1.14.4",
         "purgecss-webpack-plugin": "^0.21.0",
         "tailwindcss": "^0.6.4",
-        "vue": "^2.5.16"
+        "vue": "^2.5.17"
     },
     "dependencies": {
         "ajv": "^6.5.2",
         "form-backend-validation": "github:ekrist1/form-backend-validation",
         "moment": "^2.22.2",
         "vue-multiselect": "^2.1.0",
-        "vue-template-compiler": "^2.5.16"
+        "vue-template-compiler": "^2.5.17"
     }
 }
